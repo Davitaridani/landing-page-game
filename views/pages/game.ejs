@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./assets/sass/main.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Game</title>
+  </head>
+  <body>
+    <section class="sect-game">
+      <div class="container">
+        <div class="items-title d-flex align-items-center gap-4 mb-5">
+          <a href="/" class="nav-link d-flex gap-2 align-items-center ">
+
+            <img src="../../assets/img/arrow.png" alt="Icon Arrow" />
+            <img src="../../assets/img/game-logo.png" alt="Logo Game" />
+            <div class="title-name">
+          </a>
+            <h3>ROCK PAPER SCISSORS</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-5">
+            <div class="title text-uppercase">
+              <h3>Player 1</h3>
+            </div>
+            <button
+              type="button"
+              onclick="pickUser('batu')"
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../assets/img/game-batu.png"
+                class="img img-fluid btn-img"
+                alt=""
+                id="btnActive"
+              />
+            </button>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <div class="title text-uppercase">
+              <h3>Com</h3>
+            </div>
+            <button
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="150"
+            >
+              <img
+                src="../../assets/img/game-batu.png"
+                class="img img-fluid"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div class="col-5">
+            <button
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="250"
+            >
+              <img
+                onclick="pickUser('kertas')"
+                src="../../assets/img/game-kertas.png"
+                class="img img-fluid btn-img"
+                alt=""
+                id="btnActive"
+              />
+            </button>
+          </div>
+          <div
+            class="col-2 d-flex align-items-center"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
+            <h3 class="mb-0 text-vs" id="result">VS</h3>
+          </div>
+          <div class="col-5">
+            <button
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="350"
+            >
+              <img
+                src="../../assets/img/game-kertas.png"
+                class="img img-fluid"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div class="col-5">
+            <button
+              onclick="pickUser('gunting')"
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+            >
+              <img
+                src="../../assets/img/game-gunting.png"
+                class="img img-fluid btn-img"
+                alt=""
+                id="btnActive"
+              />
+            </button>
+          </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <button
+              class="bg-transparent border-0"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="650"
+            >
+              <img
+                src="../../assets/img/game-gunting.png"
+                class="img img-fluid"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div class="col-12">
+            <button class="img-refersh bg-transparent border-0">
+              <img
+                src="../../assets/img/game-refresh.png"
+                class="img img-fluid mt-0"
+                onclick="refreshPage()"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <!-- Aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Inisialisasi AOS -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

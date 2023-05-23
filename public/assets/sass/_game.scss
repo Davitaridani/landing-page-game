@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap');
+
+$bgColor: #9C835F;
+$bgGame : #C4C4C4;
+$colorText: #F9B23D;
+$colorWin : #4C9654;
+$colorDraw : #035B0C;
+
+h1,h2,h3,h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sect-game {
+	background-color: $bgColor;
+	max-height: 100%;
+	background-size: auto;
+	padding: 10px 0 100px ;
+	.container {
+		.items-title {
+			img:nth-child(1) {
+				width: 20px;
+				color: $colorText;
+				height: 20px;
+			}
+			img:nth-child(2) {
+				width: 40px;
+				height: 40px;
+			}
+			.title-name {
+				h3 {
+					color: $colorText;
+					font-size: 25px;
+					font-weight: 700;
+					letter-spacing: 1px;
+					margin-bottom: 0;
+				}
+			}
+		}
+		.row {
+			max-width: 1000px !important;
+			margin: auto;
+
+			.col-5 {
+				button {
+					img {
+						height: 115px;
+						width: 115px;
+						margin: 40px 0;
+					
+					}
+				}
+				.bgActive {
+					background-color: $bgGame !important;
+					height: 115px;
+					width: 115px;
+					padding: 5px ;
+					border-radius: 5px;
+				}
+			}
+			.text-vs {
+				font-size: 90px;
+				letter-spacing: 10px;
+				font-weight: 700;
+				color:  #BD0000;
+				text-align: center;
+				line-height: .9;
+			}
+			.active-result {
+				font-size: 25px;
+				padding: 16px;
+				rotate: -20deg;
+				letter-spacing: 1px;
+				font-weight: 600;
+				color:  #fff;
+				background-color: $colorWin;
+				line-height: 1.2;
+				border-radius: 5px;
+			}
+			.draw-result {
+				font-size: 35px;
+				padding: 20px;
+				letter-spacing: 1px;
+				font-weight: 600;
+				color:  #fff;
+				transition: all 3s ease-in-out;
+				background-color: $colorDraw;
+				line-height: .9;
+			}
+
+			.title {
+				margin-bottom: 0;
+				h3 {
+					letter-spacing: 3px;
+					font-weight: 700;
+					font-size: 30px;
+					color: #000;
+				}
+			}
+			.img-refersh {
+				margin: 0 0 30px ;
+				img {
+					width: 75px;
+					height: 70px;
+					animation: rotateIn 10s infinite; 
+				}
+			}
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint==mobile {
+		@media screen and (max-width: 767px) {
+			@content;
+		}
+	}
+	@else if $breakpoint==tablet {
+		@media screen and (min-width: 768px) and(max-width: 979px) {
+			@content;
+		}
+	}
+	@else if $breakpoint==notebook {
+		@media screen and (min-width: 980px) and (max-width: 1024px) {
+			@content;
+		}
+	}
+	@else if $breakpoint==mackbook {
+		@media screen and (min-width: 1025px) and (max-width: 1280px) {
+			@content;
+		}
+	}
+}
+
+@include responsive(mobile) {
+	.sect-game {
+		height: 100vh;
+		background-size: auto;
+		padding: 10px 0 100px ;
+		.container {
+			.items-title {
+				img:nth-child(1) {
+					width: 18px;
+					height: 18px;
+				}
+				img:nth-child(2) {
+					width: 33px;
+					height: 33px;
+				}
+				.title-name {
+					h3 {
+						font-size: 19px;
+					}
+				}
+			}
+			.row {
+				max-width: 1000px !important;
+				margin: auto;
+				.col-5 {
+					button {
+						img {
+							height: 60px;
+							width: 60px;
+							margin: 40px 0;
+						
+						}
+					}
+					.bgActive {
+						height: 60px;
+						width: 60px;
+						padding: 5px ;
+						border-radius: 5px;
+					}
+				}
+				.text-vs {
+					font-size: 40px;
+					letter-spacing: 2px;
+					font-weight: 700;
+					text-align: center;
+					line-height: .9;
+				}
+				.active-result {
+					font-size: 16px;
+					padding: 12px;
+					position: relative;
+					left: -22px;
+					rotate: -20deg;
+					letter-spacing: 1px;
+					line-height: 1.2;
+					border-radius: 5px;
+				}
+				.draw-result {
+					font-size: 35px;
+					padding: 20px;
+					letter-spacing: 1px;
+					font-weight: 600;
+					transition: all 3s ease-in-out;
+					line-height: .9;
+				}
+
+				.title {
+					margin-bottom: 0;
+					h3 {
+						letter-spacing: 2px;
+						font-weight: 700;
+						font-size: 20px;
+						color: #000;
+					}
+				}
+				.img-refersh {
+					margin: 0 0 30px ;
+					img {
+						width: 45px;
+						height: 40px;
+						animation: rotateIn 10s infinite; 
+					}
+				}
+			}
+		}
+	}
+}
